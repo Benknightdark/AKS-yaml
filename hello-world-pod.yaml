@@ -7,5 +7,6 @@ spec:
   containers:
     - name:  image
       image: "ubuntu:14.04"
+      imagePullPolicy: Always
       command:  ["/bin/echo","hello","world"]
 
