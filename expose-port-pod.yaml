@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hello-world22234
+  name: heldddlo-world22234
 spec:
   restartPolicy: Never
   containers:
