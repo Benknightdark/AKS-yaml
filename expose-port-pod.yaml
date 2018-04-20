@@ -8,6 +8,10 @@ spec:
     - name:  image
       image: "ubuntu:14.04"
       imagePullPolicy: Always
+      ports: 
+      - name: web
+        containerPort: 80
+        hostPort: 8080
       env:
       - name: MESSAGE
         value: "hi"
