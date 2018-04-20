@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: hello-world
 spec:
-  restartPolicy: Never
+  restartPolicy: Always
   containers:
     - name:  image
       image: "ubuntu:14.04"

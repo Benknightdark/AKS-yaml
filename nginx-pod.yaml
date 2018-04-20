@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+spec:
+  containers:
+    - name:  image
+      image: "nginx:alpine"
+      imagePullPolicy: Always
+      ports: 
+      - name: web
+        containerPort: 4256
+        hostPort: 4256
+  hostNetwork: true
+
