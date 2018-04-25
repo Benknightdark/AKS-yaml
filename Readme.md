@@ -1,7 +1,8 @@
 
 - az login
-- azure account list 
-- az account set --subscription <name or id>
+- az account list 
+- az account list --output table
+- az account set --subscription "My Demos"
 - az group create --name benAKSGroup1 --location centralus 
 
 - az aks create --resource-group benAKSGroup1 --name bkhub-cluster --node-count 1 --node-vm-size Standard_D1_v2 --dns-name-prefix benAKSGroup1 --kubernetes-version=1.8.1 --generate-ssh-keys 
