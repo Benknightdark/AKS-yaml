@@ -13,8 +13,10 @@
 
 - az aks delete --name  bkhub-cluster --resource-group benAKSGroup1 --yes --no-wait
 
-- az network dns zone create -n benAKSGroup1.com -g benAKSGroup1
-- az network dns record-set a add-record \
---ipv4-address `az network public-ip create -g benAKSGroup1 \
--n nginxpubip3  --allocation-method static -o json| jq .publicIp.ipAddress` \
--z benAKSGroup1.com -g dns --record-set-name static -o json
+
+
+- az disk create \
+  --resource-group MC_benAKSGroup1_bkhub-cluster_centralus \
+  --name myAKSDisk  \
+  --size-gb 20 \
+  --query id --output tsv
