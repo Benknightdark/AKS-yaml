@@ -8,5 +8,7 @@
 - az aks create --resource-group benAKSGroup1 --name bkhub-cluster --node-count 1 --node-vm-size Standard_D1_v2 --dns-name-prefix benAKSGroup1 --kubernetes-version=1.8.1 --generate-ssh-keys 
 
 - az aks get-credentials --resource-group benAKSGroup1 --name bkhub-cluster 
+- az network public-ip create --name aksPublicIp  --resource-group benAKSGroup1  --allocation-method static
+-  az network public-ip list --resource-group benAKSGroup1  --query [0].ipAddress --output tsv  
 
 - az aks delete --name  bkhub-cluster --resource-group benAKSGroup1 --yes --no-wait
